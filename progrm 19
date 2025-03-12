@@ -1,0 +1,14 @@
+def min_chairs_needed(simulations):
+    current_players = 0
+    max_chairs = 0
+    
+    for action in simulations:
+        if action in "CU":
+            current_players += 1
+        elif action in "RL":
+            current_players -= 1
+        max_chairs = max(max_chairs, current_players)
+    
+    return max_chairs
+simulations = input().strip()
+print(min_chairs_needed(simulations))
