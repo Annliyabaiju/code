@@ -1,0 +1,11 @@
+n=int(input())
+m=int(input())
+st=n+1
+h=[]
+while st % 3!=0:
+    st+=1
+for i in range(st,m):
+    if i%3==0:
+        h.append(i)
+print(*h)
+        
