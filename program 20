@@ -1,0 +1,7 @@
+n=int(input())
+values=[int(x) for x in input().split()]
+if len(values)==len(set(values)):
+    print("false")
+else:
+    print("true")
+
