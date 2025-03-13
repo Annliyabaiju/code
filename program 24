@@ -1,0 +1,11 @@
+n=[int(x) for x in input().split(",")]
+s,e=0,1
+mp=0
+while e<len(n):
+    if n[s]<n[e]:
+        p=n[e]-n[s]
+        mp=max(mp,p)
+    else:
+        s=e
+    e+=1
+print(mp)
