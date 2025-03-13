@@ -1,0 +1,15 @@
+li=[int(x) for x in input().split(",")]
+k=int(input())
+mi=float('inf')
+window=[]
+n=len(li)
+li.sort()
+s=[]
+for i in range(0,n-k+1):
+    window=li[i:i+k]
+    unfair=max(window)-min(window)
+    if unfair<mi:
+        mi=unfair
+        s=window
+print(*s)
+
